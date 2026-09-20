@@ -17,7 +17,7 @@ const initialFormState: FormState = {
   parentName: "",
   childName: "",
   keyStage: "KS4 - Year 10 (Early Intervention)",
-  subject: "All Three Core Subjects (Maths, English, Science)",
+  subject: "All Core Subjects (Maths, English, Science, Christian Worldview)",
   email: "",
   phone: "",
   message: "",
@@ -53,10 +53,11 @@ export default function ParentInquiryForm() {
   ];
 
   const subjectOptions = [
-    "All Three Core Subjects (Maths, English, Science)",
+    "All Core Subjects (Maths, English, Science, Christian Worldview)",
     "Mathematics Only",
     "English Language & Literature Only",
     "Science (Biology, Chemistry, Physics) Only",
+    "Christian Worldview & Character Mentorship",
     "Custom Combination (Specify in message)",
   ];
 

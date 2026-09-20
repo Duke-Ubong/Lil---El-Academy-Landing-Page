@@ -7,6 +7,7 @@ import Year10Intervention from "./components/Year10Intervention";
 import WhyUs from "./components/WhyUs";
 import ParentPartnership from "./components/ParentPartnership";
 import ParentInquiryForm from "./components/ParentInquiryForm";
+import FloatingFormBar from "./components/FloatingFormBar";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -38,6 +39,9 @@ export default function App() {
         {/* Parent Registration & Inquiry Booking Form */}
         <ParentInquiryForm />
       </main>
+
+      {/* Floating Apple Glass Quick Enroll Dock */}
+      <FloatingFormBar />
 
       {/* Footer with Contact Info (+447768639106, info@lilelacademy.com), Socials & Copyright */}
       <Footer />

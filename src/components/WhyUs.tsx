@@ -214,6 +214,19 @@ export default function WhyUs() {
               </tbody>
             </table>
           </motion.div>
+
+          {/* Quick Direct Link to Form */}
+          <div className="mt-10 text-center">
+            <motion.a
+              whileHover={{ scale: 1.02, y: -1 }}
+              whileTap={{ scale: 0.98 }}
+              href="#inquiry-form"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full text-sm sm:text-base font-bold bg-gradient-to-r from-[#5A0F1D] to-[#7B182B] text-white hover:from-[#4A0C17] hover:to-[#5A0F1D] shadow-[0_4px_20px_rgba(90,15,29,0.25)] transition-all"
+            >
+              <span>Experience The Lil-El Difference – Book Diagnostic Form</span>
+              <ArrowUpRight className="w-4 h-4 text-[#D4AF37]" />
+            </motion.a>
+          </div>
         </div>
 
       </div>

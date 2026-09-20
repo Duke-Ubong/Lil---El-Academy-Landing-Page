@@ -16,11 +16,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "About", href: "#about" },
+    { label: "Vision & Objectives", href: "#about" },
     { label: "Curriculum", href: "#curriculum" },
-    { label: "Year 10 Early Intervention", href: "#year10", badge: "Strategic" },
+    { label: "Year 10 Intervention", href: "#year10", badge: "Strategic" },
     { label: "Why Us", href: "#why-us" },
     { label: "Parent Alliance", href: "#partnership" },
+    { label: "Inquiry Form", href: "#inquiry-form" },
   ];
 
   return (
@@ -31,15 +32,22 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <span className="inline-flex items-center gap-1.5 font-medium text-[#D4AF37]">
               <Sparkles className="w-3.5 h-3.5" />
-              Faith-Rooted Supplementary Education
+              Online Christian Supplementary School
             </span>
             <span className="hidden sm:inline text-white/30">•</span>
             <span className="hidden sm:inline text-stone-300 text-[11px] tracking-wide">
-              Unlocking Potential, Inspiring Brilliance, Building Faith
+              Unlocking potentials, Inspiring Brilliance, building faith
             </span>
           </div>
 
           <div className="flex items-center gap-4 text-xs font-medium">
+            <a
+              href="#inquiry-form"
+              className="text-[#D4AF37] hover:underline font-semibold hidden md:inline-flex items-center gap-1"
+            >
+              <span>Quick Form Entry ↓</span>
+            </a>
+            <span className="hidden md:inline text-white/20">|</span>
             <a
               href="tel:+447768639106"
               className="inline-flex items-center gap-1.5 text-stone-200 hover:text-[#D4AF37] transition-colors"
