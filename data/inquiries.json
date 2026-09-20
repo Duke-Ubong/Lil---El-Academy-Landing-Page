@@ -1,0 +1,29 @@
+[
+  {
+    "id": "LE-335379",
+    "date": "20/09/2026, 04:02:15",
+    "parentName": "Test Parent",
+    "childName": "Test Student",
+    "keyStage": "KS4 - Year 10 (Early Intervention)",
+    "subject": "Mathematics & English",
+    "email": "dukeubong@gmail.com",
+    "phone": "+447768639106",
+    "message": "Verifying end-to-end inquiry email delivery with newly configured Google App Password.",
+    "emailDispatched": true,
+    "emailStatus": "dispatched"
+  },
+  {
+    "id": "LE-710088",
+    "date": "18/09/2026, 16:35:10",
+    "parentName": "Victoria Adeyemi",
+    "childName": "Joshua Adeyemi",
+    "keyStage": "KS4 - Year 10 (Early Intervention)",
+    "subject": "Mathematics Only",
+    "email": "victoria.adeyemi@example.com",
+    "phone": "+447768639106",
+    "message": "Joshua is in Year 10 and struggling with higher tier GCSE algebra.",
+    "emailDispatched": false,
+    "emailStatus": "app_password_required",
+    "diagnosticNotice": "Google SMTP requires a 16-character App Password (from https://myaccount.google.com/apppasswords) rather than your standard account password."
+  }
+]

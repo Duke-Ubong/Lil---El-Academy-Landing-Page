@@ -1,0 +1,6 @@
+{
+  "name": "Lil-El Academy",
+  "description": "Premier online Christian supplementary school unlocking potential, inspiring brilliance, and building faith with KS1–KS4 Maths, English, Science, and Year 10 Early Intervention.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
