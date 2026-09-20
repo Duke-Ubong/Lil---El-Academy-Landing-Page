@@ -19,8 +19,8 @@ export default function Navbar() {
     { label: "Vision & Objectives", href: "#about" },
     { label: "Curriculum", href: "#curriculum" },
     { label: "Year 10 Intervention", href: "#year10", badge: "Strategic" },
+    { label: "Process", href: "#admission-process" },
     { label: "Why Us", href: "#why-us" },
-    { label: "Parent Alliance", href: "#partnership" },
     { label: "Inquiry Form", href: "#inquiry-form" },
   ];
 

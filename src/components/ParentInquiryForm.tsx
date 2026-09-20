@@ -288,68 +288,20 @@ export default function ParentInquiryForm() {
                     <p>• For urgent questions, call <a href="tel:+447768639106" className="text-[#5A0F1D] font-bold underline">+44 7768 639106</a>.</p>
                   </div>
 
-                  {/* Staff Note if SMTP Notice */}
-                  {successData.smtpNotice && (
-                    <div className="bg-amber-50/90 border border-amber-200/80 rounded-2xl p-4 text-left text-xs text-amber-900 max-w-lg mx-auto space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2 font-bold text-amber-900">
-                          <Info className="w-4 h-4 text-amber-600 shrink-0" />
-                          <span>Staff Note: Delivery Status</span>
-                        </div>
-                        <button
-                          type="button"
-                          onClick={() => setShowAdminDetails(!showAdminDetails)}
-                          className="text-[11px] underline font-semibold text-amber-800 hover:text-amber-950"
-                        >
-                          {showAdminDetails ? "Hide Details" : "View Details"}
-                        </button>
-                      </div>
-
-                      <p className="text-amber-800 text-[11px]">
-                        ✓ <strong>Inquiry is safely recorded in the Admissions Ledger.</strong> To receive instant email alerts to {successData.smtpNotice.account || "your inbox"}, ensure the Google 16-character App Password is active.
-                      </p>
-
-                      {showAdminDetails && successData.smtpNotice.instructions && (
-                        <div className="mt-2 pt-2 border-t border-amber-200/60 font-mono text-[10px] space-y-1 bg-white/70 p-2.5 rounded-lg">
-                          {successData.smtpNotice.instructions.map((step, idx) => (
-                            <div key={idx} className="text-stone-700">{step}</div>
-                          ))}
-                          <div className="pt-1">
-                            <a
-                              href="https://myaccount.google.com/apppasswords"
-                              target="_blank"
-                              rel="noreferrer"
-                              className="text-[#5A0F1D] font-bold underline inline-flex items-center gap-1 font-sans"
-                            >
-                              Open Google App Passwords <ExternalLink className="w-3 h-3" />
-                            </a>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  )}
-
-                  {successData.notice && !successData.smtpNotice && (
-                    <p className="text-xs text-stone-400 italic">
-                      {successData.notice}
-                    </p>
-                  )}
-
-                  <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+                  <div className="flex flex-wrap items-center justify-center gap-3 pt-4">
                     <button
                       onClick={() => setSuccessData(null)}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-[#5A0F1D] text-white hover:bg-[#7B182B] transition-colors shadow-xs"
+                      className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-semibold bg-[#5A0F1D] text-white hover:bg-[#7B182B] transition-colors shadow-xs"
                     >
                       <span>Submit Another Inquiry</span>
                     </button>
-                    <button
-                      type="button"
-                      onClick={() => setIsLedgerOpen(true)}
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-semibold bg-stone-100/90 hover:bg-stone-200/90 text-stone-700 border border-stone-200/60 transition-colors"
+                    <a
+                      href="tel:+447768639106"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-colors"
                     >
-                      <ClipboardList className="w-3.5 h-3.5 text-[#5A0F1D]" />
-                      <span>Review in Admissions Ledger</span>
-                    </button>
+                      <Phone className="w-3.5 h-3.5 text-[#5A0F1D]" />
+                      <span>Call Admissions Office</span>
+                    </a>
                   </div>
                 </div>
               ) : (
@@ -540,27 +492,17 @@ export default function ParentInquiryForm() {
 
         </div>
 
-        {/* Admissions Staff & Testing Review Bar */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex flex-wrap items-center justify-center gap-3 px-4 py-2 rounded-full backdrop-blur-md bg-white/70 border border-stone-200/80 shadow-2xs text-xs text-stone-600">
-            <span className="font-semibold text-[#5A0F1D] flex items-center gap-1.5">
-              <ClipboardList className="w-3.5 h-3.5 text-[#D4AF37]" />
-              Staff & Admissions Review:
-            </span>
-            <span>View recorded inquiries and verify email delivery</span>
-            <button
-              type="button"
-              onClick={() => setIsLedgerOpen(true)}
-              className="font-bold text-[#5A0F1D] hover:text-[#7B182B] underline decoration-[#D4AF37] decoration-2 transition-colors ml-1"
-            >
-              Open Admissions Ledger & SMTP Status →
-            </button>
-          </div>
+        {/* Parent Reassurance Note */}
+        <div className="mt-8 text-center text-xs text-stone-500">
+          <span className="inline-flex items-center gap-1.5">
+            <Shield className="w-3.5 h-3.5 text-[#163A24]" />
+            <span>Official Admissions Portal for Lil-El Academy • All inquiries processed within 24 hours</span>
+          </span>
         </div>
 
       </div>
 
-      {/* Admissions Ledger Modal */}
+      {/* Admissions Ledger Modal (Kept for administrative debugging if triggered via shortcut) */}
       <InquiriesLedgerModal
         isOpen={isLedgerOpen}
         onClose={() => setIsLedgerOpen(false)}

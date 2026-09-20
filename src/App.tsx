@@ -6,6 +6,7 @@ import Curriculum from "./components/Curriculum";
 import Year10Intervention from "./components/Year10Intervention";
 import WhyUs from "./components/WhyUs";
 import ParentPartnership from "./components/ParentPartnership";
+import AdmissionTracker from "./components/AdmissionTracker";
 import ParentInquiryForm from "./components/ParentInquiryForm";
 import FloatingFormBar from "./components/FloatingFormBar";
 import Footer from "./components/Footer";
@@ -35,6 +36,9 @@ export default function App() {
 
         {/* Parent-School Partnership & Real Testimonials */}
         <ParentPartnership />
+
+        {/* Visual Step-by-Step Admission Process Tracker */}
+        <AdmissionTracker />
 
         {/* Parent Registration & Inquiry Booking Form */}
         <ParentInquiryForm />
